@@ -1,10 +1,8 @@
 # PWDGEN é un programma che genera passwords con tre gradi di difficoltà
 # Fin dall'inizio si puo' decidere se salvarle in un file oppure eliminarle
 # i tre tipi di difficoltà sono, facile, media ed Ardua
-
-# E' ancora una beta, devo aggiungere quache funzione aggiuntiva
-
-### FUNZIONI DA AGGIUNGERE: Criptare il file con le passwords e decriptarlo all'interno del programma E creare una versione con GUI
+### FUNZIONI DA AGGIUNGERE: Scegliere i noma da un database, Eliminare il file all'interno del programma,
+### Criptare il file con le passwords e decriptarlo all'interno del programma E creare una versione con GUI
 
 
 __autore__ = 'Abdelmounaim Omri'
@@ -15,6 +13,7 @@ import random # Modulo random, che serve a generare caratteri random, usato per 
 import string # Modulo stringa, usato per creare stringhe complesse coi caratteri random
 import time # Modulo tempo, usato per impostare un delay tra un comando ed un altro
 import os # Moduli riguardanti il sistema, il modulo os serve per eseguire i programmi
+import pyperclip # Modulo che permette di copiere testi su clipboard
 
 
 
@@ -60,6 +59,11 @@ def save(): # Funzione che, dopo la creazione di passwords, le  salva nel file '
         f= open(nome_del_file,"a") # Python apre il file 'nome_del_file.txt' in modalità append (aggiunta)
         f.write('\n{}\n'.format(pwd)) # Python aggiunge tutte le passwords genera
         print("Password salvata nel file "+ nome_del_file)
+        
+def copy_to_clipboard():
+    global pwd # Richiama la variabile 'pwd' cioé la password
+    pyperclip.copy(pwd) # Copia la variabile pwd nella clipboard
+    pyperclip.paste() # Permette alla variabile pwd di essere incollata
 
 # Loop principale del programma
 
@@ -85,17 +89,22 @@ while True:
             print("Quanto desideri sia lunga la password ?")
             lunghezza = int(input("-->"))
             psswdgen(lunghezza) # usa la lunghezza scelta dal user per creare la password
+            time.sleep(0.2)
+            copy_to_clipboard()
+            print("\nPassword copiata nella clipboard\n")
+            time.sleep(0.2)
             if os.path.exists(nome_del_file):
                 save()
             time.sleep(2)
             os.system('cls') # comando che resetta la console
-
         except ValueError: # Se la lunghezza non é una cifra, il programma manda in output l'errore seguente
             print("[!] Lunghezza invalida [!]")
+            
     elif scelta2 == '0':
         exit() # esce dal programma
     else:
         print("\n[!] Comando invalido [!]")
         time.sleep(1)
         os.system('cls')
+
         
