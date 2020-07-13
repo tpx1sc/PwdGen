@@ -38,9 +38,7 @@ name = ('''
 |__|         \_/  \_/    |_______/ \______| |_______||__| \__|
 ================================================================
 Creato da {}
-'''.format(__autore__)) # Variabile name, che sarebbe il nome del prgramma in ascii ed anche il nome dell'autore, cioé
-# il sommo Hassan
-
+'''.format(__autore__))
 # Le funzioni usate dal programma
 
 
