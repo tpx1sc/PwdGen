@@ -5,7 +5,7 @@
 ### Criptare il file con le passwords e decriptarlo all'interno del programma E creare una versione con GUI
 
 
-__autore__ = 'Abdelmounaim Omri'
+__autore__ = 'Abdelmounaim Omri aka tpx1sc'
 
 # Tutti i moduli usati dal programma
 
