@@ -1,8 +1,6 @@
-# PWDGEN é un programma che genera passwords con tre gradi di difficoltà
+# PWDGEN é un programma che genera passwords
 # Fin dall'inizio si puo' decidere se salvarle in un file oppure eliminarle
-# i tre tipi di difficoltà sono, facile, media ed Ardua
-### FUNZIONI DA AGGIUNGERE: Scegliere i noma da un database, Eliminare il file all'interno del programma,
-### Criptare il file con le passwords e decriptarlo all'interno del programma E creare una versione con GUI
+### FUNZIONI DA AGGIUNGERE: Criptare il file con le passwords e decriptarlo all'interno del programma
 
 
 __autore__ = 'Abdelmounaim Omri aka tpx1sc'
