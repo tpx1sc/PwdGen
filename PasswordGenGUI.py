@@ -4,6 +4,8 @@ import string # Modulo stringa, usato per creare stringhe complesse coi caratter
 from tkinter import messagebox
 import pyperclip
 
+__autor__ = '''abdelmounaim omri aka tpx1sc'''
+
 nome_del_programma = ("PasswordGenerator")
 version = '1'
 pwd = 0
