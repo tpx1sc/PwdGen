@@ -11,9 +11,10 @@ import random # Modulo random, che serve a generare caratteri random, usato per 
 import string # Modulo stringa, usato per creare stringhe complesse coi caratteri random
 import time # Modulo tempo, usato per impostare un delay tra un comando ed un altro
 import os # Moduli riguardanti il sistema, il modulo os serve per eseguire i programmi
-import pyperclip # Modulo che permette di copiere testi su clipboard
-
-
+try:
+   import pyperclip # Modulo per copiare file negli appunti
+except ImportError: # Se il modulo non é installato, richiedera' all'utilizzatore d'installarlo
+   print("Errore, Modulo pyperclip richiesto, per installarlo usa 'pip'")
 
 # Le variabili e liste usate dal programma
 pwd = 0
