@@ -14,8 +14,10 @@ import os # Moduli riguardanti il sistema, il modulo os serve per eseguire i pro
 try:
    import pyperclip # Modulo per copiare file negli appunti
 except ImportError: # Se il modulo non é installato, richiedera' all'utilizzatore d'installarlo
-   print("Errore, Modulo pyperclip richiesto, per installarlo usa 'pip'")
-
+   try:
+        os.system("pip install pyperclip")
+   except Error:
+        print("Errore, Modulo pyperclip richiesto, per installarlo usa 'pip'")
 # Le variabili e liste usate dal programma
 pwd = 0
 nome_del_file = 'passwords.txt' # Nome del file nel quale verrano salvate tutte le password generate
